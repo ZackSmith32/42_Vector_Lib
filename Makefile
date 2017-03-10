@@ -6,7 +6,7 @@
 #    By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/22 16:32:25 by zsmith            #+#    #+#              #
-#    Updated: 2017/03/09 20:05:05 by zsmith           ###   ########.fr        #
+#    Updated: 2017/03/09 21:14:08 by zsmith           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ FLAGS	=	-Wall -Wextra -Werror -c
 CFILES	=	v_new.c			\
 			v_insert.c		\
 			v_increase.c	\
-			v_val.c			\
+			v_item.c		\
 			
 			
 SRCDIR	=	srcs/

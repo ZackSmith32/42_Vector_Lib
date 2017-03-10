@@ -6,7 +6,7 @@
 /*   By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 15:51:59 by zsmith            #+#    #+#             */
-/*   Updated: 2017/03/09 17:42:41 by zsmith           ###   ########.fr       */
+/*   Updated: 2017/03/10 10:57:27 by zsmith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ void	v_insert(t_vect *head, size_t i, void *data)
 		head->len - index);
 	ft_memcpy(head->a + index, data, sizeof(data));
 	head->len = head->len + sizeof(data);
+	head->units = head->len / head->data_size;
 }
