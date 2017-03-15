@@ -6,7 +6,7 @@
 /*   By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 15:51:59 by zsmith            #+#    #+#             */
-/*   Updated: 2017/03/10 10:57:27 by zsmith           ###   ########.fr       */
+/*   Updated: 2017/03/15 13:36:59 by zsmith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,16 @@
 
 void	v_insert(t_vect *head, size_t i, void *data)
 {
-	printf("in: insert data_size = %d\n", (int)sizeof(data));
 	size_t	index;
 
-	// if (sizeof(data) != head->data_size)
-	// 	return ;
 	if (head->len == head->cap)
 		v_increase(head);
-	index = i * sizeof(data);
-	printf("dest %d, src %d, len %d\n", (int)(index + sizeof(data)), (int)(index), 
-		(int)(head->len - index));
-	ft_memmove(head->a + index + sizeof(data), head->a + index, 
+	index = i * head->data_size;
+	ft_memmove(
+		head->a + index + sizeof(data), 
+		head->a + index, 
 		head->len - index);
-	ft_memcpy(head->a + index, data, sizeof(data));
-	head->len = head->len + sizeof(data);
+	ft_memcpy(head->a + index, &data, head->data_size);
+	head->len = head->len + head->data_size;
 	head->units = head->len / head->data_size;
 }

@@ -6,7 +6,7 @@
 /*   By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 16:32:54 by zsmith            #+#    #+#             */
-/*   Updated: 2017/03/09 20:08:05 by zsmith           ###   ########.fr       */
+/*   Updated: 2017/03/13 21:55:20 by zsmith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int		main(void)
 	v_insert(test, 0, ft_lstnew("qrst", 5));
 	v_insert(test, 0, ft_lstnew("uvwx", 5));
 	v_insert(test, 0, ft_lstnew("yz12", 5));
-	// v_insert(test, 3, ft_lstnew("0123", 5));
+	v_insert(test, 3, ft_lstnew("0123", 5));
+	v_remove(test, 5);
 
 
 	items = (test->a);
@@ -40,14 +41,14 @@ int		main(void)
 	printf("sizeof t_list = %d\n", (int)sizeof(t_list));
 	while (i <= (int)test->len / test->data_size)
 	{
-		printf("result = %s\n", ((t_list *)v_val(i, test))->content);
+		printf("result = %s\n", ((t_list *)v_item(i, test))->content);
 		// items++;
 		i++;
 	}
 	return (0);
 }
 
-/*
 
-gcc main.c -o main -I ../includes/vect.h -L. ../libdir/libft.a ../libvect.a
+/*
+gcc lemd.c -o main -I ../includes/vect.h -L. ../libdir/libft.a ../libvect.a
 */

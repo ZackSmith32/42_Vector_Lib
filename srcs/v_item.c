@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   v_val.c                                            :+:      :+:    :+:   */
+/*   v_item.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 19:50:42 by zsmith            #+#    #+#             */
-/*   Updated: 2017/03/09 21:12:53 by zsmith           ###   ########.fr       */
+/*   Updated: 2017/03/15 10:27:17 by zsmith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vect.h"
 
-void	*v_item(size_t index, t_vect *vect)
+void	*v_item(t_vect *vect, size_t index)
 {
-	if (index * vect->data_size > vect->len)
+	// printf("index = %d, vect->units = %d\n", (int)index, (int)vect->units);
+	if (index >= vect->units)
+	{
+		printf("v : index out of scope : return = NULL\n");
 		return (NULL);
+	}
 	return (vect->a + (index * vect->data_size));
+	// return ( &(vect->a[index]));
 }

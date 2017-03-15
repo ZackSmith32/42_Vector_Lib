@@ -6,7 +6,7 @@
 /*   By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 16:20:28 by zsmith            #+#    #+#             */
-/*   Updated: 2017/03/09 21:37:06 by zsmith           ###   ########.fr       */
+/*   Updated: 2017/03/15 13:48:33 by zsmith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	v_increase(t_vect *head)
 {
-	printf("v: in: increase\n");
+	// printf("~~~~~~~~~~~~~~~increase~~~~~~~~~~~~\n");
 	void	*new;
 
 	new = ft_memalloc(head->cap * 2);
@@ -22,5 +22,4 @@ void	v_increase(t_vect *head)
 	free(head->a);
 	head->a = new;
 	head->cap = head->cap * 2;
-	printf("v : out: increse\n");
 }
