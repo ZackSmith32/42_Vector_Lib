@@ -6,14 +6,15 @@
 /*   By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 15:51:59 by zsmith            #+#    #+#             */
-/*   Updated: 2017/03/15 13:36:59 by zsmith           ###   ########.fr       */
+/*   Updated: 2017/03/23 00:10:54 by zsmith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vect.h"
 
 /*
-**	i is the position in the array in data units not bytes
+**	> i is the position in the array in data units not bytes
+**	> v_insert dublicates source material, into vector
 */
 
 void	v_insert(t_vect *head, size_t i, void *data)

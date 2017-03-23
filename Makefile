@@ -6,7 +6,7 @@
 #    By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/22 16:32:25 by zsmith            #+#    #+#              #
-#    Updated: 2017/03/13 11:27:10 by zsmith           ###   ########.fr        #
+#    Updated: 2017/03/22 10:54:59 by zsmith           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,13 @@ CFILES	=	v_new.c			\
 SRCDIR	=	srcs/
 OFILES	=	$(CFILES:.c=.o)
 
-.PHONY: all $(NAME) main complib clean flcean re
+.PHONY: all $(NAME) clean flcean re
 
 all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(addprefix $(SRCDIR), $(CFILES))
 	ar rc $(NAME) $(OFILES)
-	/bin/rm -f $(OFILES)
 
 clean:
 	/bin/rm -f $(OFILES)
