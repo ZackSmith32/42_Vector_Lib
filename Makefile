@@ -6,7 +6,7 @@
 #    By: zsmith <zsmith@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/22 16:32:25 by zsmith            #+#    #+#              #
-#    Updated: 2017/03/22 10:54:59 by zsmith           ###   ########.fr        #
+#    Updated: 2017/03/23 15:01:22 by zsmith           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CFILES	=	v_new.c			\
 			v_increase.c	\
 			v_item.c		\
 			v_remove.c		\
+			v_pop.c			\
 			
 			
 SRCDIR	=	srcs/
